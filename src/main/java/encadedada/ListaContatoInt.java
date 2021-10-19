@@ -1,3 +1,8 @@
+package encadedada;
+
+import encadedada.Contato;
+import encadedada.ListaContato;
+
 public interface ListaContatoInt {
 
     void imprimirDadosContato(Contato contato);

@@ -1,3 +1,5 @@
+package encadedada;
+
 public class ListaContato {
     Nodo inicio;
 }

@@ -1,7 +1,9 @@
+package encadedada;
+
 public class ListaContatoImpl implements ListaContatoInt {
 
     public void imprimirDadosContato(Contato contato) {
-        System.out.println("Dados do Contato:");
+        System.out.println("Dados do encadedada.Contato:");
         System.out.println("*****************");
         System.out.println("Nome: " + contato.nome);
         System.out.println("Sobrenome: " + contato.sobrenome);

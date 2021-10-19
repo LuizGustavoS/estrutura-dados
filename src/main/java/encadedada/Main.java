@@ -1,3 +1,5 @@
+package encadedada;
+
 import java.util.Scanner;
 
 public class Main extends ListaContatoImpl {
