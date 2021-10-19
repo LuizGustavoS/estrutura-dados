@@ -45,7 +45,7 @@ public class ListaContatoImpl implements ListaContatoInt {
     public int buscarContatoPorEmail(ListaContato lista, String email, Contato contatoEncontrado) {
 
         if (lista.inicio == null){
-            System.out.println("Lista nao iniciada!");
+            System.out.println("Lista não iniciada!");
             return 0;
         }
 
@@ -62,6 +62,31 @@ public class ListaContatoImpl implements ListaContatoInt {
     }
 
     public int removerContatoPorEmail(ListaContato lista, String email) {
+
+        if (lista.inicio == null){
+            return 0;
+        }
+
+        Nodo inicio = lista.inicio;
+        if (inicio.contato.email.equals(email)){
+            lista.inicio = lista.inicio.proximo;
+            return 1;
+        }
+
+        Nodo nodoParaRemover = lista.inicio;
+        while (nodoParaRemover.proximo != null){
+            if (nodoParaRemover.contato.email.equals(email)){
+                break;
+            }
+            nodoParaRemover = nodoParaRemover.proximo;
+        }
+
+        Nodo nodoAnterior = inicio;
+        while (nodoAnterior.proximo != null && !nodoAnterior.proximo.equals(nodoParaRemover)){
+            nodoAnterior = nodoAnterior.proximo;
+        }
+
+        nodoAnterior.proximo = nodoParaRemover.proximo;
         return 1;
     }
 

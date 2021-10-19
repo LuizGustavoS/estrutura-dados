@@ -20,18 +20,28 @@ public class Main extends ListaContatoImpl {
                 break;
             }
 
-            switch (opcao) {
-                case 1 -> inserirContato(listaContato, true);
-                case 2 -> inserirContato(listaContato, false);
-                case 3 -> {
-                    Contato contato = new Contato();
-                    System.out.println("Insira o email");
-                    final String email = new Scanner(System.in).nextLine();
-                    ContatoCtrl.buscarContatoPorEmail(listaContato, email, contato);
-                    ContatoCtrl.imprimirDadosContato(contato);
-                }
-                case 6 -> ContatoCtrl.imprimirListaContatos(listaContato);
-                default -> System.out.println("Opcao invalida");
+            if (opcao == 1) {
+                inserirContato(listaContato, true);
+            }else if (opcao == 2) {
+                inserirContato(listaContato, false);
+            }else if (opcao == 3) {
+                Contato contato = new Contato();
+                System.out.println("Insira o email");
+                final String email = new Scanner(System.in).nextLine();
+                ContatoCtrl.buscarContatoPorEmail(listaContato, email, contato);
+                ContatoCtrl.imprimirDadosContato(contato);
+            }else if (opcao == 4){
+                System.out.println("Insira o mes");
+                final int mes = new Scanner(System.in).nextInt();
+                ContatoCtrl.imprimirListaContatosPorMesNascimento(listaContato, mes);
+            }else if (opcao == 5){
+                System.out.println("Insira o email");
+                final String email = new Scanner(System.in).nextLine();
+                ContatoCtrl.removerContatoPorEmail(listaContato, email);
+            }else if (opcao == 6) {
+                ContatoCtrl.imprimirListaContatos(listaContato);
+            }else {
+                System.out.println("Opcao invalida");
             }
         }
     }
