@@ -18,9 +18,7 @@ public class ListaContatoImpl implements ListaContatoInt {
         return new ListaContato();
     }
 
-    public void destruirListaEncadeadaContatos(ListaContato lista) {
-
-    }
+    public void destruirListaEncadeadaContatos(ListaContato lista) {}
 
     public int inserirContatoInicio(ListaContato lista, Contato contato) {
         lista.inicio = new Nodo(contato, lista.inicio);
@@ -50,15 +48,16 @@ public class ListaContatoImpl implements ListaContatoInt {
         }
 
         Nodo nodo = lista.inicio;
-        do {
+        while (nodo != null){
             if (nodo.contato.email.equals(email)){
                 copy(nodo.contato, contatoEncontrado);
-                break;
+                return 1;
             }
-            nodo = nodo.proximo;
-        }while (nodo.proximo != null);
 
-        return 1;
+            nodo = nodo.proximo;
+        }
+
+        return 0;
     }
 
     public int removerContatoPorEmail(ListaContato lista, String email) {
