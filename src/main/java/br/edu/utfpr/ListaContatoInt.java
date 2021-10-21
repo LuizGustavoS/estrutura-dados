@@ -1,7 +1,4 @@
-package encadedada;
-
-import encadedada.Contato;
-import encadedada.ListaContato;
+package br.edu.utfpr;
 
 public interface ListaContatoInt {
 

@@ -1,4 +1,4 @@
-package encadedada;
+package br.edu.utfpr;
 
 public class ListaContatoImpl implements ListaContatoInt {
 
