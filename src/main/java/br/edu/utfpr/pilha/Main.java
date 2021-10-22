@@ -32,7 +32,7 @@ public class Main {
         }
     }
 
-    static void printarMenu(){
+    private static void printarMenu(){
         System.out.println("1 - INSERIR ITEM");
         System.out.println("2 - REMOVER ITEM");
         System.out.println("3 - PRINTAR ITENS");

@@ -5,7 +5,9 @@ class Pilha {
 }
 
 class Nodo {
+
     Item item;
+
     Nodo proximo;
 
     public Nodo(Integer valor) {
@@ -14,9 +16,20 @@ class Nodo {
 }
 
 class Item {
+
     Integer valor;
 
     public Item(Integer valor) {
         this.valor = valor;
     }
+}
+
+interface PilhaInterface{
+
+    void adicionarValor(Pilha pilha, Integer valor);
+
+    void removerValor(Pilha pilha);
+
+    void printarPilha(Pilha pilha);
+
 }

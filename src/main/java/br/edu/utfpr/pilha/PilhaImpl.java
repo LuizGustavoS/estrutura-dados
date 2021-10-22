@@ -1,12 +1,6 @@
 package br.edu.utfpr.pilha;
 
-interface PinhaInteface {
-
-    void adicionarValor(Pilha pilha, Integer valor);
-
-}
-
-class PilhaImpl implements PinhaInteface {
+class PilhaImpl implements PilhaInterface {
 
     public void adicionarValor(Pilha pilha, Integer valor){
 
