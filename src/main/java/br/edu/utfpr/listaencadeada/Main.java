@@ -1,4 +1,4 @@
-package br.edu.utfpr;
+package br.edu.utfpr.listaencadeada;
 
 import java.util.Scanner;
 

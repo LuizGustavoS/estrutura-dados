@@ -1,4 +1,4 @@
-package br.edu.utfpr;
+package br.edu.utfpr.listaencadeada;
 
 public class ListaContato {
     Nodo inicio;
