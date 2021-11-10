@@ -9,6 +9,7 @@
     <version>1.0.0</version>
 
     <properties>
+        <path-executavel>br.edu.utfpr.pilha.Main</path-executavel>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
     </properties>
@@ -32,7 +33,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>br.edu.utfpr.listaencadeada.Main</mainClass>
+                            <mainClass>${path-executavel}</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -67,7 +68,7 @@
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <mainClass>br.edu.utfpr.listaencadeada.Main</mainClass>
+                                        <mainClass>${path-executavel}</mainClass>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
