@@ -1,4 +1,4 @@
-package br.edu.utfpr.pilha;
+package br.edu.utfpr.atv2;
 
 import java.util.Scanner;
 

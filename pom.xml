@@ -32,7 +32,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>br.edu.utfpr.listaencadeada.Main</mainClass>
+                            <mainClass>br.edu.utfpr.atv1.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -67,7 +67,7 @@
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <mainClass>br.edu.utfpr.listaencadeada.Main</mainClass>
+                                        <mainClass>br.edu.utfpr.atv1.Main</mainClass>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
