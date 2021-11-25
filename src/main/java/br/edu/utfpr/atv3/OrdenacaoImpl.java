@@ -7,15 +7,18 @@ public class OrdenacaoImpl implements Ordenacao {
         int qtdeComp = 0, qtdeTroca = 0;
         int n = valores.length;
         for (int j = 1; j < n; j++) {
+
             int key = valores[j];
             int i = j - 1;
+
             while ((i > -1) && (valores[i] > key)) {
                 qtdeComp++;
+                qtdeTroca++;
                 valores[i + 1] = valores[i];
                 i--;
             }
+
             valores[i + 1] = key;
-            qtdeTroca++;
         }
 
         return new Result(qtdeComp, qtdeTroca);
