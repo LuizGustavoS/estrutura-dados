@@ -1,17 +1,18 @@
 package br.edu.utfpr.atv3;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-/*        int i = 0;
-        int[] valores = new int[25];
+        int i = 0;
+        int[] entradas = new int[25];
 
         while (true) {
             int entrada;
-            System.out.println("Insira o numero " + i + 1);
+            System.out.println("Insira o numero da posicao " + (i + 1));
 
             try {
                 entrada = new Scanner(System.in).nextInt();
@@ -29,16 +30,16 @@ public class Main {
                 continue;
             }
 
-            valores[i] = entrada;
+            entradas[i] = entrada;
 
             if (i == 24) {
                 break;
             }
             i++;
-        }*/
+        }
 
-        Ordenacao ordenacao = new OrdenacaoImpl();
-        int[] valores = {9,14,3,2,43,11,58,22};
+        final Ordenacao ordenacao = new OrdenacaoImpl();
+        int[] valores = Arrays.copyOf(entradas, i);
 
         Result r1 = ordenacao.insertionSort(Arrays.copyOf(valores, valores.length));
         Result r2 = ordenacao.selectionSort(Arrays.copyOf(valores, valores.length));
